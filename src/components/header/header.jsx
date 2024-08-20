@@ -57,7 +57,6 @@ const Header = () => {
     "Game",
   ];
 
-  
   const genreColors = {
     Action: "text-green-200",
     Cars: "text-orange-400",
@@ -72,7 +71,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-primary h-20">
+    <header className="bg-primary h-20 bg-opacity-95 right-0 left-0 fixed z-30">
       <div className="grid grid-cols-5 gap-1">
         <div
           onClick={openClose}
@@ -123,7 +122,10 @@ const Header = () => {
               <h4 className="text-white text-2xl pl-3 mt-6 mb-5">Genre</h4>
               <ul className="pl-3 grid grid-cols-2 gap-y-3">
                 {genre.map((type, index) => (
-                  <li key={index} className={`text-white text-xl mt-2 ${genreColors[type]}`}>
+                  <li
+                    key={index}
+                    className={`text-xl mt-2 ${genreColors[type]}`}
+                  >
                     <a href="/">{type}</a>
                   </li>
                 ))}
@@ -133,8 +135,9 @@ const Header = () => {
         </nav>
         <div className="flex items-center h-20 -ml-80 w-48">
           <img
-            className="w-52 h-12"
+            className="w-52 h-12 cursor-pointer"
             src="https://hianime.to/images/logo.png?v=0.1"
+            href="/"
           />
         </div>
         <div className="absolute left-72 col-span-2 ">
@@ -181,7 +184,7 @@ const Header = () => {
           <Buttons name="Login" />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
