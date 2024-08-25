@@ -4,7 +4,30 @@
 
 
 
-::-webkit-scrollbar {
+.nav-bar ::-webkit-scrollbar  {
     display: none;
 }
  
+.custom-select {
+    -webkit-appearance: none; /* Chrome, Safari, Edge */
+    -moz-appearance: none;    /* Firefox */
+    appearance: none;         /* Standard */
+  }
+
+.custom-select option {
+    background-color: #374151;
+    color: #ffbade;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+    background-color: #1a1928;
+    
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #6c757d;
+}
+
+
+  

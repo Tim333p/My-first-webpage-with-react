@@ -71,7 +71,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-primary h-20 bg-opacity-95 right-0 left-0 fixed z-30">
+    <header className="bg-primary h-20 bg-opacity-95 right-0 left-0 fixed z-30 font-sans">
       <div className="grid grid-cols-5 gap-1">
         <div
           onClick={openClose}
