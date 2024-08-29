@@ -8,6 +8,8 @@ const Main = () => {
   return (
     <main className="z-0 absolute bg-primary right-0 left-0 font-sans h-full">
       <div className=" grid grid-cols-4 bg-primary">
+
+        {/* This is main content with span 3 */}
         <div className="col-span-3">
           <div className="absolute bg-gray-700 left-3 right-1/4 top-24 h-2/3 mt-12 rounded-3xl">
             <h1 className="text-white font-medium text-2xl pt-9 pl-9">Filter</h1>
@@ -80,6 +82,8 @@ const Main = () => {
             </div>
           </div>
         </div>
+
+        {/* This is grid with span 1 most popular and genre */}
         <div className="mt-20">
           <h1 className="text-pink text-3xl font-semibold ml-8 mt-8">Most Popular</h1>
           <div className="bg-gray-700 w-10/12 h-auto ml-8 mt-6 flex items-center justify-center">
@@ -101,7 +105,17 @@ const Main = () => {
 
               </div>
           </div>
+
+          <div>
+            <h1 className="text-pink font-semibold text-3xl mt-12 ml-8">Genres</h1>
+            <div className="bg-gray-700 w-10/12 h-auto flex items-center justify-center ml-8 mt-7">
+              <div className="bg-green-500 w-11/12 h-10 my-5">
+
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </main>
   );

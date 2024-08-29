@@ -1,11 +1,45 @@
 import { useEffect, useState } from "react";
 import { SocialIcon } from "react-social-icons";
 import Buttons from "../../utilities/buttons";
+import t from "../../data/types";
+
+const colors = [
+  "text-red-100",
+  "text-blue-300",
+  "text-green-500",
+  "text-yellow-500",
+  "text-purple-500",
+  "text-orange-400",
+  "text-pink-200",
+  "text-teal-500",
+  "text-indigo-500",
+  "text-gray-500",
+  "text-lime-300",
+  "text-amber-500",
+  "text-rose-400",
+  "text-cyan-500",
+  "text-emerald-200",
+  "text-violet-500",
+  "text-fuchsia-500",
+  "text-sky-400",
+  "text-stone-300",
+  "text-red-500",
+  "text-yellow-100",
+  "text-green-300",
+  "text-blue-500",
+  "text-purple-500",
+  "text-orange-500",
+  "text-pink-500",
+];
+
+const randomColor = () => colors[Math.floor(Math.random() * colors.length)];
 
 const Header = () => {
   const [open, setOpen] = useState(false);
   const [transition, setTransition] = useState(false);
   const [navStyle, setNavStyle] = useState({});
+
+  const [close, setClose] = useState(false);
 
   const openClose = () => {
     setTransition(true);
@@ -70,12 +104,16 @@ const Header = () => {
     Game: "text-orange-500",
   };
 
+  const bgstyle = {
+    filter: "blur(4px)",
+  };
+
   return (
     <header className="bg-primary h-20 bg-opacity-95 right-0 left-0 fixed z-30 font-sans">
       <div className="grid grid-cols-5 gap-1">
         <div
           onClick={openClose}
-          className="hamburger flex flex-col items-center justify-center w-16 mt-2"
+          className="hamburger flex flex-col items-center justify-center w-16 mt-2 cursor-pointer"
         >
           <div className="w-8 h-1 bg-white rounded-lg mb-1.5"></div>
           <div className="w-8 h-1 bg-white rounded-lg mb-1.5"></div>
@@ -88,7 +126,7 @@ const Header = () => {
             transform: open ? "translateX(0%)" : "translateX(-100%)",
             opacity: open ? 1 : 0,
           }}
-          className="nav-bar z-20 fixed left-0 top-0 bottom-0 w-1/6 bg-gray-700 bg-opacity-95"
+          className="nav-bar z-40 fixed left-0 top-0 bottom-0 w-1/6 bg-gray-700 bg-opacity-80 backdrop-blur-md"
         >
           <ul className="scroll-bar h-full flex flex-col overflow-auto">
             <div className="flex">
@@ -105,7 +143,7 @@ const Header = () => {
                 </h3>
               </div>
             </div>
-            <button className="border-solid bg-gray-600 rounded-3xl px-24 py-3 text-xl  mt-20">
+            <button className="border-solid bg-gray-600 rounded-3xl w-72 py-3 text-xl ml-3 mt-20">
               Community
             </button>
             {sideTitles.map((title, index) => (
@@ -129,10 +167,40 @@ const Header = () => {
                     <a href="/">{type}</a>
                   </li>
                 ))}
+                {!close && (
+                  <div
+                    onClick={() => setClose(true)}
+                    className="cursor-pointer text-white text-lg font-normal"
+                  >
+                    <span className="font-semibold text-2xl mr-1">+</span>
+                    More
+                  </div>
+                )}
+
+                {close && (
+                  <div className="grid grid-cols-2 gap-x-40 gap-y-5 text-nowrap mt-3 text-xl mb-3">
+                    {t[0].name.map((item, index) => (
+                      <div
+                        key={`item ${index}`}
+                        className={`cursor-pointer ${randomColor()}`}
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </ul>
             </div>
           </ul>
         </nav>
+
+        {open && (
+          <div
+            onClick={openClose}
+            className="fixed inset-0 bg-primary backdrop-blur-lg bg-opacity-85 z-30"
+          ></div>
+        )}
+
         <div className="flex items-center h-20 -ml-80 w-48">
           <img
             className="w-52 h-12 cursor-pointer"
