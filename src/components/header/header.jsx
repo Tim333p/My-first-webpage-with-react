@@ -151,7 +151,7 @@ const Header = () => {
                 key={index}
                 className="border-solid border-gray-500 border-b-2 pb-3 mt-6"
               >
-                <a className="text-white text-2xl pl-3" href="/">
+                <a className="text-white text-2xl pl-3 hover:text-pink" href="/">
                   {title}
                 </a>
               </li>
