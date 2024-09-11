@@ -7,6 +7,8 @@ const results = [
     dub: "0",
     type: "Movie",
     duration: "50m",
+    resolution: "N/A",
+    rating: "7.12",
   },
   {
     image:
@@ -16,6 +18,8 @@ const results = [
     dub: "1096",
     type: "TV",
     duration: "24m",
+    resolution: "HD",
+    rating: "8.62",
   },
   {
     image:
@@ -25,6 +29,8 @@ const results = [
     dub: "1",
     type: "Movie",
     duration: "115m",
+    resolution: "HD",
+    rating: "7.96",
   },
   {
     image:
@@ -34,6 +40,8 @@ const results = [
     dub: "1",
     type: "Movie",
     duration: "90m",
+    resolution: "HD",
+    rating: "7.98",
   },
   {
     image:
@@ -43,6 +51,8 @@ const results = [
     dub: "0",
     type: "TV",
     duration: "4m",
+    resolution: "HD",
+    rating: "5.58",
   },
   {
     image:
@@ -52,6 +62,8 @@ const results = [
     dub: "0",
     type: "TV",
     duration: "4m",
+    resolution: "HD",
+    rating: "6.15",
   },
   {
     image:
@@ -61,6 +73,8 @@ const results = [
     dub: "0",
     type: "TV",
     duration: "4m",
+    resolution: "HD",
+    rating: "6.48",
   },
   {
     image:
@@ -70,6 +84,8 @@ const results = [
     dub: "1",
     type: "Special",
     duration: "105m",
+    resolution: "HD",
+    rating: "7.12",
   },
   {
     image:
@@ -79,6 +95,8 @@ const results = [
     dub: "0",
     type: "OVA",
     duration: "12m",
+    resolution: "HD",
+    rating: "7.05",
   },
   {
     image:
@@ -88,6 +106,8 @@ const results = [
     dub: "0",
     type: "Special",
     duration: "11m",
+    resolution: "HD",
+    rating: "5.52",
   },
   {
     image:
@@ -97,6 +117,8 @@ const results = [
     dub: "1",
     type: "Special",
     duration: "24m",
+    resolution: "HD",
+    rating: "6.49",
   },
   {
     image:
@@ -106,6 +128,8 @@ const results = [
     dub: "0",
     type: "Special",
     duration: "24m",
+    resolution: "HD",
+    rating: "N/A",
   },
   {
     image:
@@ -115,6 +139,8 @@ const results = [
     dub: "0",
     type: "Movie",
     duration: "30m",
+    resolution: "HD",
+    rating: "7.1",
   },
   {
     image:
@@ -124,6 +150,8 @@ const results = [
     dub: "1",
     type: "Movie",
     duration: "101m",
+    resolution: "HD",
+    rating: "8.19",
   },
   {
     image:
@@ -133,15 +161,19 @@ const results = [
     dub: "0",
     type: "Special",
     duration: "106m",
+    resolution: "HD",
+    rating: "8.21",
   },
   {
     image:
-      "https://cdn.noitatnemucod.net/thumbnail/300x400/100/f9c03a6e40d324f2cfc22f870abe1c15.jpg",
+      "https://cdn.noitatnemucod.net/thumbnail/300x400/100/31b57d916ab1c020bea5aca7f50fe678.jpg",
     name: "One Piece: Adventure of Nebulandia",
     title: "1",
     dub: "1",
     type: "Special",
     duration: "106m",
+    resolution: "HD",
+    rating: "7.32",
   },
   {
     image:
@@ -151,6 +183,8 @@ const results = [
     dub: "0",
     type: "OVA",
     duration: "33m",
+    resolution: "SD",
+    rating: "7.41",
   },
   {
     image:
@@ -160,6 +194,8 @@ const results = [
     dub: "3",
     type: "OVA",
     duration: "33m",
+    resolution: "HD",
+    rating: "6.08",
   },
   {
     image:
@@ -169,6 +205,8 @@ const results = [
     dub: "0",
     type: "OVA",
     duration: "29m",
+    resolution: "SD",
+    rating: "7.17",
   },
   {
     image:
@@ -178,6 +216,8 @@ const results = [
     dub: "0",
     type: "OVA",
     duration: "27m",
+    resolution: "HD",
+    rating: "5.22",
   },
   {
     image:
@@ -187,6 +227,8 @@ const results = [
     dub: "0",
     type: "OVA",
     duration: "15m",
+    resolution: "HD",
+    rating: "6.44",
   },
   {
     image:
@@ -196,6 +238,8 @@ const results = [
     dub: "1",
     type: "Movie",
     duration: "107m",
+    resolution: "HD",
+    rating: "8.02",
   },
   {
     image:
@@ -205,6 +249,8 @@ const results = [
     dub: "1",
     type: "Movie",
     duration: "115m",
+    resolution: "HD",
+    rating: "8.02",
   },
   {
     image:
@@ -214,6 +260,8 @@ const results = [
     dub: "0",
     type: "Movie",
     duration: "5m",
+    resolution: "SD",
+    rating: "7.19",
   },
   {
     image:
@@ -223,6 +271,8 @@ const results = [
     dub: "0",
     type: "Movie",
     duration: "55m",
+    resolution: "HD",
+    rating: "7.19",
   },
   {
     image:
@@ -232,6 +282,8 @@ const results = [
     dub: "0",
     type: "TV",
     duration: "24m",
+    resolution: "HD",
+    rating: "5.25",
   },
   {
     image:
@@ -241,6 +293,8 @@ const results = [
     dub: "0",
     type: "TV",
     duration: "23m",
+    resolution: "HD",
+    rating: "8.34",
   },
   {
     image:
@@ -250,6 +304,8 @@ const results = [
     dub: "12",
     type: "TV",
     duration: "24m",
+    resolution: "HD",
+    rating: "8.32",
   },
   {
     image:
@@ -259,6 +315,8 @@ const results = [
     dub: "0",
     type: "OVA",
     duration: "24m",
+    resolution: "HD",
+    rating: "7.75",
   },
   {
     image:
@@ -268,6 +326,8 @@ const results = [
     dub: "0",
     type: "Special",
     duration: "10m",
+    resolution: "SD",
+    rating: "7.21",
   },
   {
     image:
@@ -277,6 +337,8 @@ const results = [
     dub: "0",
     type: "Special",
     duration: "107m",
+    resolution: "HD",
+    rating: "7.94",
   },
   {
     image:
@@ -286,6 +348,8 @@ const results = [
     dub: "0",
     type: "Movie",
     duration: "95m",
+    resolution: "HD",
+    rating: "7.6",
   },
   {
     image:
@@ -295,6 +359,8 @@ const results = [
     dub: "0",
     type: "Special",
     duration: "10m",
+    resolution: "HD",
+    rating: "7.17",
   },
   {
     image:
@@ -304,6 +370,8 @@ const results = [
     dub: "0",
     type: "OVA",
     duration: "50m",
+    resolution: "SD",
+    rating: "5.68",
   },
   {
     image:
@@ -313,6 +381,8 @@ const results = [
     dub: "0",
     type: "Special",
     duration: "24m",
+    resolution: "HD",
+    rating: "7.21",
   },
   {
     image:
@@ -322,6 +392,8 @@ const results = [
     dub: "0",
     type: "OVA",
     duration: "28m",
+    resolution: "HD",
+    rating: "7.88",
   },
 ];
 

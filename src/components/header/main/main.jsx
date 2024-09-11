@@ -5,6 +5,9 @@ import list from "../../../data/list-of-genre";
 import Button from "../../../utilities/buttons";
 import popular from "../../../data/most-popular";
 import AnimeIcons from "../../../utilities/anime-icons"
+import TollTip from "../../../utilities/tooltip";
+import ToolTip from "../../../utilities/tooltip";
+import ToolTip2 from "../../../utilities/toolTip2";
 
 const colors = [
   "text-red-100",
@@ -173,9 +176,9 @@ const Main = () => {
               <Button  name="Filter"/>
             </div>
           </div>
-          <div className="h-auto w-9/12 absolute top-[57rem]">
-            <h1 className="text-pink font-medium text-3xl absolute -top-20 left-3">Search results for: <span className="italic">one piece</span></h1>
-            <div className="absolute grid grid-cols-6 w-full h-auto -top-8"><AnimeIcons/></div>
+          <div className="h-auto w-9/12  mt-[52rem]">
+            <h1 className="text-pink font-medium text-3xl ml-3 mb-3">Search results for: <span className="italic">one piece</span></h1>
+            <div className="grid grid-cols-6 w-full h-auto gap-x-[14.9rem]"><AnimeIcons/></div>
           </div>
           
         </div>
@@ -188,11 +191,11 @@ const Main = () => {
 
 
                 {popular.map((item, index) => <div key={`item ${index}`} className="w-full h-32 border-solid border-gray-500 border-b flex mt-2">
-                  <img className=" w-20 h-28 mt-2 rounded-lg cursor-pointer" src={item.image} alt="onePiece image" />
-                  <div className="w-full h-full">
+                  <ToolTip2 key={index} item={item}><img className=" w-20 h-28 mt-2 rounded-lg cursor-pointer" src={item.image} alt="onePiece image" /></ToolTip2>
+                  <div className="w-full h-full ml-20">
                     <h1 className="text-white font-bold text-lg mt-7 ml-3 hover:text-pink cursor-pointer">{item.name}</h1>
                     <div className="bg-green-400  font-semibold justify-center w-1/4 ml-3 mt-2 rounded-l-md inline-block"><img className="w-5 mr-1 ml-1 py-1 inline-block" src="https://cdn-icons-png.flaticon.com/512/1620/1620709.png" alt="" /><span className="mt-0.5">{item.title}</span></div>
-                    <div className="bg-blue-300  font-semibold justify-center w-1/4 ml-0.5 inline-block "><img className="w-5 mr-1 ml-1 py-1 inline-block" src="https://www.iconpacks.net/icons/1/free-microphone-icon-342-thumb.png" alt="" /><span className="mt-0.5">{item.dub}</span></div>
+                    <div className="bg-blue-300  font-semibold justify-center w-1/4 ml-0.5 inline-block "><img className="w-5  ml-1 py-1 inline-block" src="https://www.iconpacks.net/icons/1/free-microphone-icon-342-thumb.png" alt="" /><span className="mt-0.5">{item.dub}</span></div>
                     <h1 className="text-gray-500 inline-block text-2xl absolute mt-1 ml-1">·</h1>
                     <h1 className="text-gray-400 inline-block ml-4 text-lg">TV</h1>
                     <span className="text-gray-500 absolute text-3xl font-bold right-16 -mt-3 cursor-pointer hover:text-pink">+</span>
