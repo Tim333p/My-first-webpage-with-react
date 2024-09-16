@@ -5,9 +5,8 @@ import list from "../../../data/list-of-genre";
 import Button from "../../../utilities/buttons";
 import popular from "../../../data/most-popular";
 import AnimeIcons from "../../../utilities/anime-icons"
-import TollTip from "../../../utilities/tooltip";
-import ToolTip from "../../../utilities/tooltip";
 import ToolTip2 from "../../../utilities/toolTip2";
+import results from "../../../data/search-results";
 
 const colors = [
   "text-red-100",
@@ -44,61 +43,34 @@ const reduceChar = (word, maxLength) => {
 
 const randomColor = () => colors[Math.floor(Math.random() * colors.length)];
 
-const mainItem = [
-  {
-    item: [
-      "Action",
-      "Adventure",
-      "Cars",
-      "Comedy",
-      "Crime",
-      "Dementia",
-      "Demons",
-      "Drama",
-      "Dub",
-      "Ecchi",
-      "Family",
-      "Fantasy",
-      "Game",
-      "Gourmet",
-      "Harem",
-      "Historical",
-      "Horror",
-      "Isekai",
-      "Josei",
-      "Kids",
-      "Magic",
-      "Martial Arts",
-      "Mecha",
-    ]
-  },
-  {
-    item: [
-      "Military",
-      "Music",
-      "Mystery",
-      "Parody",
-      "Police",
-      "Psychological",
-      "Romance",
-      "Samurai",
-      "School",
-      "Sci-Fi",
-      "Seinen",
-      "Shoujo",
-      "Shoujo Ai",
-      "Shounen",
-      "Shounen Ai",
-      "Slice of Life",
-      "Space",
-      "Sports",
-    ]
-  }
-]
+
+
 
 const Main = () => {
 
   const [open, setOpen] = useState(false);
+  const [activeButton, setActiveButton] = useState(0);
+
+  
+
+  const itemsPerPage = 36;
+
+  const startIndex = activeButton * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  const paginatedResults = results.slice(startIndex, endIndex);
+
+  const handleActiveButton = (buttonIndex) => {
+    setActiveButton(buttonIndex);
+  }
+
+  const totalPages = Math.min(Math.ceil(results.length / itemsPerPage));
+
+
+  
+  
+
+
 
   return (
     <main className="z-0 absolute bg-primary right-0 left-0 font-sans h-full">
@@ -178,9 +150,24 @@ const Main = () => {
           </div>
           <div className="h-auto w-9/12  mt-[52rem]">
             <h1 className="text-pink font-medium text-3xl ml-3 mb-3">Search results for: <span className="italic">one piece</span></h1>
-            <div className="grid grid-cols-6 w-full h-auto gap-x-[14.9rem]"><AnimeIcons/></div>
+            <div className="grid grid-cols-6 w-full h-auto gap-x-[14.9rem]">
+              <AnimeIcons items={paginatedResults} />
+            </div>
           </div>
-          
+          <div className="w-full h-24 mt-10 flex items-center justify-center">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <div key={index} onClick={() => handleActiveButton(index)} className={`border-solid bg-gray-700 mr-3 rounded-full ${activeButton === index ? "bg-pink" : "bg-gray-700"}`}>
+                <span className="text-gray-500 text-2xl px-5 py-3 inline-block">{index + 1}</span>
+
+              </div>
+            ))}
+            <div onClick={() => handleActiveButton(activeButton + 1)} className={`border-solid bg-gray-700 mr-3 rounded-full ${activeButton === totalPages - 1 ? "opacity-50" : ""}`}>
+              <span className="text-gray-500 text-1xl px-6 py-4 inline-block">&gt;</span>
+            </div>
+            <div onClick={() => handleActiveButton(activeButton + 2)} className={`border-solid bg-gray-700 mr-3 rounded-full ${activeButton === totalPages - 1 ? "opacity-50" : ""}`}>
+              <span className="text-gray-500 text-1xl px-5 py-4 inline-block">&gt;&gt;</span>
+            </div>
+          </div>
         </div>
 
         {/* This is grid with span 1 most popular and genre */}

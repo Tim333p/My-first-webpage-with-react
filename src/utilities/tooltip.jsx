@@ -6,7 +6,7 @@ const ToolTip = ({ children, item }) => {
     opacity: 0,
     left: 0,
     top: 0,
-    transition: "opacity 0.3s ease-in-out",
+    transition: "opacity 0.4s ease-in-out",
     visible: "hidden",
     pointerEvents: "none"
   });

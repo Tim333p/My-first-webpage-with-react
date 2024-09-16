@@ -5,10 +5,10 @@ const reduceChar = (item, maxchar) => {
   return item.length > maxchar ? item.substring(0, maxchar) + "..." : item;
 };
 
-const AnimeIcons = () => {
+const AnimeIcons = ({items = results}) => {
   return (
     <>
-      {results.map((items, index) => (
+      {items.map((items, index) => (
         <ToolTip key={index} item={items}><div
           key={`items ${index}`}
           className="w-56 h-96 m-3 z-50 overflow-hidden group"
