@@ -156,15 +156,15 @@ const Main = () => {
           </div>
           <div className="w-full h-24 mt-10 flex items-center justify-center">
             {Array.from({ length: totalPages }).map((_, index) => (
-              <div key={index} onClick={() => handleActiveButton(index)} className={`border-solid bg-gray-700 mr-3 rounded-full ${activeButton === index ? "bg-pink" : "bg-gray-700"}`}>
+              <div key={index} onClick={() => handleActiveButton(index)} className={`border-solid bg-gray-700 mr-3 rounded-full cursor-pointer ${activeButton === index ? "bg-pink" : "bg-gray-700"}`}>
                 <span className="text-gray-500 text-2xl px-5 py-3 inline-block">{index + 1}</span>
 
               </div>
             ))}
-            <div onClick={() => handleActiveButton(activeButton + 1)} className={`border-solid bg-gray-700 mr-3 rounded-full ${activeButton === totalPages - 1 ? "opacity-50" : ""}`}>
+            <div onClick={() => handleActiveButton(activeButton + 1)} className={`border-solid bg-gray-700 mr-3 rounded-full cursor-pointer ${activeButton === totalPages - 1 ? "opacity-50" : ""}`}>
               <span className="text-gray-500 text-1xl px-6 py-4 inline-block">&gt;</span>
             </div>
-            <div onClick={() => handleActiveButton(activeButton + 2)} className={`border-solid bg-gray-700 mr-3 rounded-full ${activeButton === totalPages - 1 ? "opacity-50" : ""}`}>
+            <div onClick={() => handleActiveButton(activeButton + 2)} className={`border-solid bg-gray-700 mr-3 rounded-full cursor-pointer ${activeButton === totalPages - 1 ? "opacity-50" : ""}`}>
               <span className="text-gray-500 text-1xl px-5 py-4 inline-block">&gt;&gt;</span>
             </div>
           </div>

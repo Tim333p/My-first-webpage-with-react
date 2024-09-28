@@ -19,6 +19,12 @@ export default {
         primary: '#fff',
         pink: '#ffbade',
         darkgray: '343a40'
+      },
+      screens: {
+        'sm': '530px',
+        'md': '637px',
+        'lg': '840px',
+        'xl': '950px'
       }
     },
   },

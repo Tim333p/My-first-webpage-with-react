@@ -104,9 +104,6 @@ const Header = () => {
     Game: "text-orange-500",
   };
 
-  const bgstyle = {
-    filter: "blur(4px)",
-  };
 
   return (
     <header className="bg-primary h-20 bg-opacity-95 right-0 left-0 fixed z-30 font-sans">
@@ -151,7 +148,10 @@ const Header = () => {
                 key={index}
                 className="border-solid border-gray-500 border-b-2 pb-3 mt-6"
               >
-                <a className="text-white text-2xl pl-3 hover:text-pink" href="/">
+                <a
+                  className="text-white text-2xl pl-3 hover:text-pink"
+                  href="/"
+                >
                   {title}
                 </a>
               </li>
@@ -208,7 +208,7 @@ const Header = () => {
             href="/"
           />
         </div>
-        <div className="absolute left-72 col-span-2 ">
+        <div className="absolute left-[18.5rem] col-span-2 ">
           <input
             placeholder="Search anime"
             className="mt-5 border-2 h-12 w-96 border-black"
